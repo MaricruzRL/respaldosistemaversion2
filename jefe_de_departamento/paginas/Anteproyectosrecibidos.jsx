@@ -383,64 +383,60 @@ console.log("Esto es el año actual !", anioactual);
           <br />
           De Residencia Profesional
         </h1>
-        <p>Imprimir dictamenes </p>
 
+      </div>
+      <div className="Anteproyectosubir__preguntas">
+      <p>Imprimir dictamenes </p>
 
-        <div>
+      <div>
 
-        <select
-  value={rangoInicio}
-  onChange={(e) => setRangoInicio(Number(e.target.value))}
+<select
+value={rangoInicio}
+onChange={(e) => setRangoInicio(Number(e.target.value))}
 >
-  {Array.from({ length: elementosConAsesores.length }, (_, index) => (
-    <option key={index + 1} value={index + 1}>
-      {`Del ${index + 1}`}
-    </option>
-  ))}
+{Array.from({ length: elementosConAsesores.length }, (_, index) => (
+<option key={index + 1} value={index + 1}>
+{`Del ${index + 1}`}
+</option>
+))}
 </select>
 
 <span> a </span>
 
 <select
-  value={rangoFin}
-  onChange={(e) => {
-    const nuevoRangoFin = Number(e.target.value);
-    const diferencia = nuevoRangoFin - rangoInicio;
+value={rangoFin}
+onChange={(e) => {
+const nuevoRangoFin = Number(e.target.value);
+const diferencia = nuevoRangoFin - rangoInicio;
 
-    if (diferencia > 3) {
-      // Si la diferencia es más de 3, ajustamos el rango final
-      setRangoFin(rangoInicio + 3);
-    } else {
-      // Si la diferencia es 3 o menos, aceptamos el valor seleccionado
-      setRangoFin(nuevoRangoFin);
-    }
-  }}
+if (diferencia > 3) {
+// Si la diferencia es más de 3, ajustamos el rango final
+setRangoFin(rangoInicio + 3);
+} else {
+// Si la diferencia es 3 o menos, aceptamos el valor seleccionado
+setRangoFin(nuevoRangoFin);
+}
+}}
 >
-  {Array.from({ length: elementosConAsesores.length }, (_, index) => (
-    <option key={index + 1} value={index + 1}>
-      {`Al ${index + 1}`}
-    </option>
-  ))}
+{Array.from({ length: elementosConAsesores.length }, (_, index) => (
+<option key={index + 1} value={index + 1}>
+{`Al ${index + 1}`}
+</option>
+))}
 </select>
-        </div>
-        <div>
-  <label>Selecciona una fecha: </label>
-  <DatePicker
-    selected={selectedDate}
-    onChange={handleDateChange}
-    dateFormat="dd/MM/yyyy"
-    // Ajusta otros props según tus necesidades
-  />
+</div>
+<div>
+<label>Selecciona una fecha: </label>
+<DatePicker
+selected={selectedDate}
+onChange={handleDateChange}
+dateFormat="dd/MM/yyyy"
+// Ajusta otros props según tus necesidades
+/>
 
 </div>
-
-
-
-
-      </div>
-      <div className="Anteproyectosubir__preguntas">
         <div className="informacion__tabla">
-          <table border="1">
+          <table className="tablaprueba" border="1">
             <thead>
               <tr>
                 <th>Número de Control</th>

@@ -267,10 +267,11 @@ const Evaluacionesreporte = (props) => {
       <div className="Anteproyectosubir__titulo">
         <h1>¡Bienvenido Asesor Tecnm!</h1>
         <h1>
-          En este apartado tu podras visualizar las evaluaciones que ha
+          En este apartado tu podrás visualizar las evaluaciones que ha
           realizado
         </h1>
       </div>
+      <div className="contenido_general">
       <div className="informacion__tabla">
         <table border="1">
           <thead>
@@ -392,7 +393,7 @@ const Evaluacionesreporte = (props) => {
           </tbody>
         </table>
       </div>
-
+      </div>
       {/* AQUI SE MUESTRAN LAS EVALUACIONES  */}
 
       {selectedItem && (
